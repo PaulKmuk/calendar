@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.calendar {
+   background-color: $color-bg;
+   position: sticky;
+   top: 60px;
+   height: calc(100vh - 60px);
+   overflow: scroll;
+   padding: 0 10px;
+
+   &::-webkit-scrollbar {
+      display: none;
+   }
+
+   .wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      background-color: $color-farme;
+      border-radius: 5px;
+
+      .header {
+         display: flex;
+         align-items: center;
+         padding: 12px 15px;
+         gap: 10px;
+
+         button {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+         }
+
+         .add {
+            background-color: $color-primary;
+            color: white;
+         }
+
+         .arrow {
+            background: none;
+            width: 25px;
+            height: 25px;
+            padding: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .arrow:hover {
+            background-color: rgb(230, 230, 230);
+         }
+
+         p {
+            font-weight: 600;
+            font-size: 18px;
+         }
+
+         .menu {
+            margin-left: auto;
+
+            button {
+               background: none;
+               border: 1px solid rgb(230, 230, 230);
+               box-shadow: $shadow;
+            }
+         }
+      }
+   }
+}

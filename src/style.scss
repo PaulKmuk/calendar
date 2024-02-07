@@ -1,0 +1,36 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+
+   body {
+      font-family: Arial, Helvetica, sans-serif;
+   }
+}
+
+.button-4 {
+   background-color: #FAFBFC;
+   border: 1px solid rgba(27, 31, 35, 0.15);
+   border-radius: 6px;
+   box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+   box-sizing: border-box;
+   color: #4e5255;
+   color: $color-text-2;
+   cursor: pointer;
+   display: inline-block;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 20px;
+   padding: 6px 16px;
+   position: relative;
+ }
+ 
+ .button-4:hover {
+   background-color: #F3F4F6;
+   transition-duration: 0.1s;
+ }
+
