@@ -5,12 +5,15 @@ import { FaRegCalendarAlt, FaListAlt } from "react-icons/fa";
 import { SlMagnifier } from "react-icons/sl";
 import { IoSettingsSharp } from "react-icons/io5";
 import { BiSolidLogOut } from "react-icons/bi";
-import user from "../../assets/user.png"
+import { useDispatch } from 'react-redux'; 
+import { logout } from '../../redux/slices/authSlice';
+import userImg from "../../assets/user.png"
 import "./navbar.scss"
 
 const Navbar = () => {
 
    const [dropDown, setDropDown] = useState(false)
+   const dispatch = useDispatch()
 
    return (
       <nav>
@@ -34,7 +37,7 @@ const Navbar = () => {
                </button>
             </div>
             <div onClick={() => setDropDown(prev => !prev)} className='menu'>
-               <img src={user}/>
+               <img src={userImg}/>
                <p>User</p>
                <span>
                   {dropDown 
@@ -47,7 +50,7 @@ const Navbar = () => {
                         <IoSettingsSharp />
                         <span>Ustawienia</span>
                      </a>
-                     <a className='item'>
+                     <a className='item' onClick={() => dispatch(logout())}>
                         <BiSolidLogOut />
                         <span>Wyloguj</span>
                      </a>

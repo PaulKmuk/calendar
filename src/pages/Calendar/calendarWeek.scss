@@ -1,0 +1,53 @@
+@import "../../variables";
+
+.calendar-week {
+   position: relative;
+
+   .week-days {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      
+      .day {
+         border: 1px solid rgb(230, 230, 230);
+         background-color: rgb(245, 245, 245);
+         font-size: 12px;
+         font-weight: 600;
+         text-align: center;
+         padding: 6px;
+         
+         border-right-width: 1px;
+         border-left-width: 0px;
+         
+         &:last-child {
+            border-right-width: 0px;
+            border-left-width: 0px;
+         }
+      }
+   }
+
+   .days {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+
+      .day {
+
+         
+         .hour {
+            min-height: 80px;
+            border: 1px solid rgb(230, 230, 230);
+            border-right-width: 1px;
+            border-left-width: 0px;
+            border-top-width: 0px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px; 
+            padding: 4px;
+
+            p {
+               font-size: 8px;
+               text-align: start;
+            }
+         }
+      }
+   }
+}

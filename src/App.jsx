@@ -3,6 +3,7 @@ import Register from "./pages/Register/Register"
 import Calendar from "./pages/Calendar/Calendar.jsx"
 import ListEvents from "./pages/ListEvents/ListEvents"
 import Navbar from "./components/Navbar/Navbar"
+import { useSelector } from "react-redux"
 import {
    createBrowserRouter,
    RouterProvider,
@@ -10,6 +11,9 @@ import {
 } from "react-router-dom"
 
 function App() {
+
+   const user = useSelector(state => state.auth.user)
+   const userLocalStorage = JSON.parse(localStorage.getItem("user"))
 
    const Layout = () => {
       return (
@@ -20,10 +24,13 @@ function App() {
       )
    }
 
+   // console.log(user);
+   // console.log(userLocalStorage);
+
    const router = createBrowserRouter([
       {
          path: "/",
-         element: <Layout />,
+         element: (user || userLocalStorage) ? <Layout /> : <Login />,
          children: [
             {
                path: "/",

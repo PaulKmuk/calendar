@@ -28,6 +28,8 @@
          }
       }
 
+
+
       .form {
          background-color: $color-farme;
          border-radius: 5px;
@@ -62,6 +64,17 @@
             border-radius: 3px;
             font-size: 12px;
             padding: 10px 20px;
+         }
+
+         .error {
+            color: white;
+            font-weight: 800;
+            font-size: 9px;
+            border: 2px solid red;
+            border-radius: 5px;
+            width: max-content;
+            padding: 0 2px;
+            background-color: red;
          }
 
          .checkbox {

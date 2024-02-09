@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.register-complite {
+   background-color: $color-farme;
+   border-radius: 5px;
+   box-shadow: $shadow;
+   padding: 36px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   .icon {
+      font-size: 52px;
+      color: $color-primary;
+      text-align: center;
+   }
+
+   .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      
+      p {
+         color: $color-text;
+         font-weight: 600;
+         text-align: center;
+      }
+
+      button {
+         background-color: $color-primary;
+         border: none;
+         color: white;
+         font-size: 12px;
+         font-weight: 700;
+         padding: 8px 50px;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+   }
+}
